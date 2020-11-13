@@ -1,0 +1,46 @@
+<action-bar title="Upload Pup" [showBackButton]="true"></action-bar> 
+<StackLayout [formGroup]="form">
+
+
+    <TextField hint="Enter Name" 
+    
+    secure="false"
+    formControlName="title"
+    returnKeyType="done" 
+ 
+    autocorrect="false"
+    maxLength="15"
+>
+</TextField>
+
+    <TextField hint="Enter Breed" 
+    
+    secure="false"
+    formControlName="content" 
+    returnKeyType="done" 
+
+    autocorrect="false"
+    maxLength="15">
+  
+</TextField>
+<Button (tap)="onSelectSingleTap()" text="Select Image"></Button>
+
+    <ListView [items]="imageAssets" *ngIf="!isSingleMode">
+        <ng-template let-image="item" let-i="index">
+            <GridLayout columns="auto, *">
+                <Image
+                    [width]="thumbSize" 
+                    [height]="thumbSize" 
+                    [src]="image" stretch="aspectFill"></Image>
+                <Label col="1" [text]="'image ' + i"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+
+    
+    <Button text="Submit" (tap)="onSave()" type="submit" ></Button>
+
+    <Image [src]="imageSrc" *ngIf="isSingleMode" [width]="previewSize" [height]="previewSize" stretch="aspectFit"></Image>
+</StackLayout>
+
+

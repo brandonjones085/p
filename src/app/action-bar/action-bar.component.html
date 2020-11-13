@@ -1,0 +1,6 @@
+
+<ActionBar  [title]="title" >
+  <NavigationButton android.systemIcon="ic_menu_back" *ngIf="canGoBack" (tap)="onGoBack()"></NavigationButton>
+  <ActionItem text="Top Pups" (tap)="list()"><Label text="Top Pups"></Label></ActionItem>
+  <ActionItem text="Upload" (tap)="upload()"><Label text="Upload"></Label></ActionItem>
+</ActionBar>

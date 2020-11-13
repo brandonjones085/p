@@ -1,0 +1,22 @@
+.list{
+  margin-top: 10;
+}
+
+
+.lab{
+  text-align: center;
+}
+
+
+.cardStyle {
+  background-color: #3489db;
+  color: #fff;
+}
+
+.left{
+    margin-left: 80;
+}
+
+.right{
+    margin-left: 120;
+}
